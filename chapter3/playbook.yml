@@ -36,7 +36,7 @@
         state: enabled
 
 - name: Verify the Apache service
-  hosts: ansiblecontroller
+  hosts: localhost
   become: false
   tasks:
     - name: Ensure the webserver is reachable
