@@ -41,6 +41,5 @@
   tasks:
     - name: Ensure the webserver is reachable
       ansible.builtin.uri:
-      url: http://ansible_client01
-      status_code: 200
-      #test
+        url: http://ansible_client01
+        status_code: 200
