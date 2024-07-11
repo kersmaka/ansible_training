@@ -55,7 +55,7 @@
         immediate: true
         permanent: true
         state: enabled
-        loop:
+      loop:
         - http
         - https
 
