@@ -11,7 +11,7 @@
         name: "{{ item }}"
         state: present
       loop: "{{ mariadb_packages }}"
-      when: ansible_facts['distribution'] == "RedHat"
+      when: ansible_facts['distribution'] == "Fedora"
 
     - name: Start MariaDB service
       ansible.builtin.service:
