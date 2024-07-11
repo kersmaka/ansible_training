@@ -10,3 +10,9 @@
           has '{{ ansible_facts["processor_count"] }}'
           processors and '{{ ansible_facts["memtotal_mb"] }}'
           MiB of total system memory.
+
+    - name: Display ansible_local variable
+      ansible.builtin.debug:
+        msg: >-
+          The ansible_local variable is set to
+          '{{ ansible_facts["ansible_local"] }}'
