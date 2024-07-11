@@ -1,5 +1,5 @@
 - name: MariaDB server is running
-  hosts: database_dev
+  hosts: database_prod
   vars:
     mariadb_packages:
       - mariadb-server
@@ -11,6 +11,7 @@
         name: "{{ item }}"
         state: present
       loop: "{{ mariadb_packages }}"
+      when: ansible_facts['distribution'] == "RedHat"
 
     - name: Start MariaDB service
       ansible.builtin.service:
