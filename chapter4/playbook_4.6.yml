@@ -11,6 +11,7 @@
       ansible.builtin.dnf:
         name: "{{ web_package }}"
         state: present
+      ignore_errors: true  
 
     - name: Install {{ db_package }} package
       ansible.builtin.dnf:
