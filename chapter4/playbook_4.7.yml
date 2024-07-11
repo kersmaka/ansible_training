@@ -9,7 +9,7 @@
         msg: "The {{ inventory_hostname }} did not meet minimum reqs."
       when: >
         ansible_facts['memtotal_mb'] < min_ram_mb or
-        ansible_facts['distribution'] != "RedHat"
+        ansible_facts['distribution'] != "Fedora"
 
     #Install all packages
     - name: Ensure required packages are present
