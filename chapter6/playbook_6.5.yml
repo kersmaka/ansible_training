@@ -1,8 +1,6 @@
 ---
 - name: Install and configure web service
-  hosts:
-    - ansible_client01
-    - ansible_client02
+  hosts: ansible_client*
 
   tasks:
     - name: Install httpd
