@@ -1,6 +1,6 @@
 ---
 - name: List inventory hostnames
-  hosts: server*.lab.example.com
+  hosts: ansible_client*
   gather_facts: false
   tasks:
     - name: List inventory hostnames
