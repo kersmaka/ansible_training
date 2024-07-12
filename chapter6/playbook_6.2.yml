@@ -1,6 +1,6 @@
 ---
 - name: Resolve host patterns
-  hosts: '172.25.*'
+  hosts: 's*'
   gather_facts: false
   tasks:
   - name: Display managed hosts matching the host pattern
