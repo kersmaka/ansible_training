@@ -1,6 +1,6 @@
 ---
 - name: Resolve host patterns
-  hosts: lb1.lab.example.com,s1.lab.example.com,db1.example.com
+  hosts: '172.25.*'
   gather_facts: false
   tasks:
   - name: Display managed hosts matching the host pattern
