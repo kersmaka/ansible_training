@@ -1,6 +1,6 @@
 ---
 - name: Resolve host patterns
-  hosts: db1.example.com
+  hosts: 172.25.252.44
   gather_facts: false
   tasks:
   - name: Display managed hosts matching the host pattern
