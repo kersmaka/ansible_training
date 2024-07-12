@@ -1,6 +1,6 @@
 ---
 - name: Resolve host patterns
-  hosts: 'london'
+  hosts: 'europe'
   gather_facts: false
   tasks:
   - name: Display managed hosts matching the host pattern
