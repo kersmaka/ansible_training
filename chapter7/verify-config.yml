@@ -1,6 +1,6 @@
 ---
 - name: Verify the httpd config
-  hosts: servera.lab.example.com
+  hosts: ansible_client01
 
   tasks:
 
