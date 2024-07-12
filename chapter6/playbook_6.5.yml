@@ -3,50 +3,12 @@
   hosts: ansible_client*
 
   tasks:
-    - name: Install httpd
-      ansible.builtin.dnf:
-        name: httpd
-        state: latest
 
-    - name: Enable and start httpd
-      ansible.builtin.service:
-        name: httpd
-        enabled: true
-        state: started
+    - name: Import the web_tasks.yml task file
+      ansible.builtin.import_tasks: tasks/web_tasks.yml
 
-    - name: Tuning configuration installed
-      ansible.builtin.copy:
-        src: files/tune.conf
-        dest: /etc/httpd/conf.d/tune.conf
-        owner: root
-        group: root
-        mode: 0644
-      notify:
-        - restart httpd
-
-    - name: Deploy index page
-      ansible.builtin.copy:
-        content: |
-          This is {{ ansible_facts['fqdn'] }}.
-        dest: /var/www/html/index.html
-
-    - name: Install firewalld
-      ansible.builtin.dnf:
-        name: firewalld
-        state: latest
-
-    - name: Enable and start the firewall
-      ansible.builtin.service:
-        name: firewalld
-        enabled: true
-        state: started
-
-    - name: Open the port for http
-      ansible.posix.firewalld:
-        service: http
-        immediate: true
-        permanent: true
-        state: enabled
+    - name: Import the firewall_tasks.yml task file
+      ansible.builtin.import_tasks: tasks/firewall_tasks.yml
 
   handlers:
     - name: restart httpd
