@@ -1,7 +1,7 @@
 ---
 # requirements.yml
 
-- src: git@workstation.lab.example.com:student/bash_env
+- src: git@ansiblecontroller:student/bash_env
   scm: git
   version: main
   name: student.bash_env
