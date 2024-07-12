@@ -1,6 +1,6 @@
 ---
 - name: Resolve host patterns
-  hosts: 'db,&london'
+  hosts: 'london'
   gather_facts: false
   tasks:
   - name: Display managed hosts matching the host pattern
