@@ -1,0 +1,6 @@
+---
+- name: Time Synchronization
+  hosts: database_servers
+
+  roles:
+    - redhat.rhel_system_roles.timesync
