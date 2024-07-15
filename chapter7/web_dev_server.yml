@@ -1,0 +1,4 @@
+---
+- name: Configure Dev Web Server
+  hosts: dev_webserver
+  force_handlers: true
