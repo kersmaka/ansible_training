@@ -1,6 +1,6 @@
 ---
 # requirements.yml
-- src: https://github.com/kersmaka/ansible_training/tree/fb2f0909c4da912457f3d415ca9ed12b9b400914/bash_env
+- src: git@github.com:kersmaka/ansible_training.git
 #- src: git@ansiblecontroller:mgearha1/bash_env
   scm: git
   version: main
