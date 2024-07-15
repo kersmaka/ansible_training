@@ -1,7 +1,7 @@
 ---
 # requirements.yml
-
-- src: git@ansiblecontroller:mgearha1/bash_env
+- src: git@github.com:kersmaka/ansible_training/bash_env
+#- src: git@ansiblecontroller:mgearha1/bash_env
   scm: git
   version: main
-  name: mgearha1.bash_env
+  name: ansible_training/bash_env
