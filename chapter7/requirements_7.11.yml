@@ -1,4 +1,4 @@
 - name: infra.apache
-  src: https://github.com/kersmaka/ansible_training/tree/aecb0007bf0c19842c2264a3624efb0ba269f2f3/apache
+  src: git@ansiblecontroller:infra/apache
   scm: git
   version: v1.4
