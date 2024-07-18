@@ -9,3 +9,13 @@
         file: example
         baseurl: http://ansible_client02/repos/
         gpgcheck: true
+
+    - name: Ensure Repo RPM Key is Installed
+      ansible.builtin.rpm_key:
+        key: http://ansible_client02/repos/RPM-GPG-KEY-example
+        state: present
+
+    - name: Install rhelver package
+      ansible.builtin.dnf:
+        name: rhelver
+        state: present
